@@ -3,7 +3,6 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
 import {config} from 'dotenv';
-import mongoose from 'mongoose';
 import {connectToDatabase} from "./config.ts";
 import {Cutie} from "./schema.ts";
 
