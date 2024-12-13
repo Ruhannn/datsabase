@@ -1,0 +1,30 @@
+{
+  "name": "database",
+  "module": "src/mongodb/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev:mongodb": "bun --watch src/mongodb/index.ts",
+    "lint": "eslint"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.8.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.10.2",
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "typescript-eslint": "^8.18.0"
+  }
+}
