@@ -48,8 +48,7 @@ app.post('/cratecutie', async (req, res) => {
         res.status(201).send('done >///<');
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-
-        res.status(500).send('Error Creating cuties.');
+        res.status(500).send('Error creating cuties.');
     }
 })
 

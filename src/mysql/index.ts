@@ -27,7 +27,7 @@ app.get('/cuties', async (req, res) => {
     db.query('SELECT * FROM cuties', (err, results) => {
         if (err) {
             console.log(err);
-            return res.status(500).send('Error retrieving cuties');
+            return res.status(500).send('Error getting cuties');
         }
         res.status(200).json(results);
     });

@@ -1,8 +1,8 @@
 export type Cutie = {
 
-    id?: number,
+    _id: number,
     name: string,
-    createdAt?: Date,
+    createdAt: Date,
 
 }
 export type Inputs = {

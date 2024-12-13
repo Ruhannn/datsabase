@@ -9,6 +9,8 @@
     "start:mysql": "bun src/mysql/index.ts",
     "dev:postgresql": "bun --watch src/postgresql/index.ts",
     "start:postgresql": "bun src/postgresql/index.ts",
+    "dev:sqlite": "bun --watch src/sqlite/index.ts",
+    "start:sqlite": "bun src/sqlite/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
@@ -24,7 +26,8 @@
     "helmet": "^8.0.0",
     "mongoose": "^8.8.4",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
