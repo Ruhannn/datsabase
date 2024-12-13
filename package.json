@@ -6,13 +6,16 @@
     "dev:mongodb": "bun --watch src/mongodb/index.ts",
     "start:mongodb": "bun src/mongodb/index.ts",
     "dev:mysql": "bun --watch src/mysql/index.ts",
-    "dev:start": "bun src/mysql/index.ts",
+    "start:mysql": "bun src/mysql/index.ts",
+    "dev:postgresql": "bun --watch src/postgresql/index.ts",
+    "start:postgresql": "bun src/postgresql/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
     "@types/mysql": "^2.15.26",
     "body-parse": "^0.1.0",
     "cors": "^2.8.5",

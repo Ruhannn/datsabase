@@ -8,6 +8,8 @@ import {db} from "./database.ts";
 
 config();
 
+
+
 const app = express();
 
 const port = process.env.PORT || 5000;
