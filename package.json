@@ -4,20 +4,27 @@
   "type": "module",
   "scripts": {
     "dev:mongodb": "bun --watch src/mongodb/index.ts",
+    "start:mongodb": "bun src/mongodb/index.ts",
+    "dev:mysql": "bun --watch src/mysql/index.ts",
+    "dev:start": "bun src/mysql/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@types/mysql": "^2.15.26",
+    "body-parse": "^0.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "helmet": "^8.0.0",
     "mongoose": "^8.8.4",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
   },
-  "devDependencies": {    "@types/cors": "^2.8.17",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/mongoose": "^5.11.97",
     "@types/morgan": "^1.9.9",
