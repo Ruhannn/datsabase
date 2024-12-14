@@ -19,6 +19,8 @@
     "start:cassandra": "bun src/cassandra/index.ts",
     "dev:pocketbase": "bun --watch src/pocketbase/index.ts",
     "start:pocketbase": "bun src/pocketbase/index.ts",
+    "dev:edgedb": "bun --watch src/edgedb/index.ts",
+    "start:edgedb": "bun src/edgedb/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
@@ -32,6 +34,7 @@
     "cors": "^2.8.5",
     "couchbase": "^4.4.4",
     "dotenv": "^16.4.7",
+    "edgedb": "^1.5.12",
     "express": "^4.21.2",
     "helmet": "^8.0.0",
     "mongoose": "^8.8.4",

@@ -15,6 +15,6 @@
 
 - [x] 8. **PocketBase** (embedded SQLite)
 
-- [ ] 9. **EdgeDB** (graph-relational database)
+- [x] 9. **EdgeDB** (graph-relational database)
 
 - [ ] 10. **Oracle** (RDBMS)

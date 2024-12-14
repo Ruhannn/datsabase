@@ -17,7 +17,7 @@ export default function App() {
                         return (
                             // eslint-disable-next-line
                             // @ts-expect-error
-                            <Tooltip key={cutie._id}
+                            <Tooltip key={cutie._id ?? cutie.id}
                                      followCursor
                                      html={<>Cutie since <span
                                          className="font-bold">{format(cutie.createdAt!, "do MMM Y")}</span> {getEmoji()}</>}

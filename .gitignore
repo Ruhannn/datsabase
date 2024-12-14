@@ -175,3 +175,4 @@ dist
 .DS_Store
 /src/pocketbase/pb_data/
 /src/pocketbase/pb_migrations/
+*.edgeql

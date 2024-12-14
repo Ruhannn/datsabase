@@ -19,21 +19,7 @@ app.use(express.json());
 
 db.run(
     `CREATE TABLE IF NOT EXISTS cuties
-     (
-         _id
-         INTEGER
-         PRIMARY
-         KEY
-         AUTOINCREMENT,
-         name
-         TEXT
-         NOT
-         NULL,
-         createdAt
-         TEXT
-         DEFAULT
-         CURRENT_TIMESTAMP
-     )`,
+     (_id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT NOT NULL, createdAt TEXT DEFAULT CURRENT_TIMESTAMP)`,
     (err) => {
         if (err) {
             console.error(err.message);
