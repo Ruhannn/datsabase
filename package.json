@@ -21,6 +21,8 @@
     "start:pocketbase": "bun src/pocketbase/index.ts",
     "dev:edgedb": "bun --watch src/edgedb/index.ts",
     "start:edgedb": "bun src/edgedb/index.ts",
+    "dev:appwrite": "bun --watch src/appwrite/index.ts",
+    "start:appwrite": "bun src/appwrite/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
@@ -40,6 +42,7 @@
     "mongoose": "^8.8.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "node-appwrite": "^14.1.0",
     "pocketbase": "^0.22.1",
     "redis": "^4.7.0",
     "sqlite3": "^5.1.7"
