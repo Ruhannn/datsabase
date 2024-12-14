@@ -15,12 +15,15 @@
     "start:redis": "bun src/redis/index.ts",
     "dev:couchbase": "bun --watch src/couchbase/index.ts",
     "start:couchbase": "bun src/couchbase/index.ts",
+    "dev:cassandra": "bun --watch src/cassandra/index.ts",
+    "start:cassandra": "bun src/cassandra/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@datastax/astra-db-ts": "^1.5.0",
     "@neondatabase/serverless": "^0.10.4",
     "@types/mysql": "^2.15.26",
     "body-parse": "^0.1.0",

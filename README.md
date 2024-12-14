@@ -1,15 +1,20 @@
-# database
+## hehe ;3
+- [x] 1. **MySQL** (Relational Database)
 
-To install dependencies:
+- [x] 2. **PostgreSQL** (Relational Database)
 
-```bash
-bun install
-```
+- [x] 3. **MongoDB** (NoSQL Database)
 
-To run:
+- [x] 4. **SQLite** (Relational Database)
 
-```bash
-bun run index.ts
-```
+- [x] 5. **Couchbase** (NoSQL Database)
 
-This project was created using `bun init` in bun v1.1.36. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+- [x] 6. **Redis** (In-memory Database)
+
+- [x] 7. **Cassandra** (NoSQL Database)
+
+- [ ] 8. **DynamoDB** (NoSQL Database)
+
+- [ ] 9. **MariaDB** (Relational Database)
+
+- [ ] 10. **Neo4j** (Graph Database)
