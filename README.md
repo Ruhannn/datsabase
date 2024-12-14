@@ -13,8 +13,8 @@
 
 - [x] 7. **Cassandra** (NoSQL Database)
 
-- [ ] 8. **DynamoDB** (NoSQL Database)
+- [x] 8. **PocketBase** (NoSQL Database)
 
-- [ ] 9. **MariaDB** (Relational Database)
+- [ ] 9. **EdgeDB** (Relational Database)
 
-- [ ] 10. **Neo4j** (Graph Database)
+- [ ] 10. **Oracle** (Graph Database)

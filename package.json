@@ -17,6 +17,8 @@
     "start:couchbase": "bun src/couchbase/index.ts",
     "dev:cassandra": "bun --watch src/cassandra/index.ts",
     "start:cassandra": "bun src/cassandra/index.ts",
+    "dev:pocketbase": "bun --watch src/pocketbase/index.ts",
+    "start:pocketbase": "bun src/pocketbase/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
@@ -35,6 +37,7 @@
     "mongoose": "^8.8.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "pocketbase": "^0.22.1",
     "redis": "^4.7.0",
     "sqlite3": "^5.1.7"
   },
