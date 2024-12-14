@@ -13,8 +13,8 @@
 
 - [x] 7. **Cassandra** (NoSQL Database)
 
-- [x] 8. **PocketBase** (NoSQL Database)
+- [x] 8. **PocketBase** (embedded SQLite)
 
-- [ ] 9. **EdgeDB** (Relational Database)
+- [ ] 9. **EdgeDB** (graph-relational database)
 
-- [ ] 10. **Oracle** (Graph Database)
+- [ ] 10. **Oracle** (RDBMS)
