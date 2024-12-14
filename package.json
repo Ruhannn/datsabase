@@ -13,6 +13,8 @@
     "start:sqlite": "bun src/sqlite/index.ts",
     "dev:redis": "bun --watch src/redis/index.ts",
     "start:redis": "bun src/redis/index.ts",
+    "dev:couchbase": "bun --watch src/couchbase/index.ts",
+    "start:couchbase": "bun src/couchbase/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
@@ -23,6 +25,7 @@
     "@types/mysql": "^2.15.26",
     "body-parse": "^0.1.0",
     "cors": "^2.8.5",
+    "couchbase": "^4.4.4",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "helmet": "^8.0.0",

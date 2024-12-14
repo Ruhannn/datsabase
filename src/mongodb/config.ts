@@ -3,7 +3,7 @@ import {config} from 'dotenv';
 import {mongoOptions} from "./util/mongoOptions.ts";
 
 config();
-const isLocal = true
+const isLocal = false
 
 export const connectToDatabase = async () => {
     const firstUrl = isLocal ? "mongodb" : "mongodb+srv";

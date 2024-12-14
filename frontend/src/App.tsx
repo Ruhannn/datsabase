@@ -6,7 +6,6 @@ import {getEmoji} from "./util";
 import {motion} from "framer-motion";
 import 'react-tippy/dist/tippy.css'
 
-
 export default function App() {
     const {data} = useCuties()
     return (
@@ -19,9 +18,10 @@ export default function App() {
                             // eslint-disable-next-line
                             // @ts-expect-error
                             <Tooltip key={cutie._id}
-                                      followCursor
-                                     html={<>Cutie since <span className="font-bold">{format(cutie.createdAt!, "do MMM Y")}</span> {getEmoji()}</>}
-                                     // title={`Cutie since ${format(cutie.createdAt!, "do MMM Y")} ${getEmoji()}`}
+                                     followCursor
+                                     html={<>Cutie since <span
+                                         className="font-bold">{format(cutie.createdAt!, "do MMM Y")}</span> {getEmoji()}</>}
+                                // title={`Cutie since ${format(cutie.createdAt!, "do MMM Y")} ${getEmoji()}`}
                                      arrow>
                                 <motion.h1
                                     className="text-xl cursor-pointer"

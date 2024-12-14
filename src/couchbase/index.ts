@@ -2,10 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
-import bodyParser from 'body-parser';
 import {config} from 'dotenv';
-import {sql} from "./database.ts";
-
+import {bucket, cluster, collection} from "./databast.ts";
 
 
 config();
@@ -17,46 +15,40 @@ const port = process.env.PORT || 5000;
 app.use(morgan('dev'));
 app.use(helmet());
 app.use(cors());
-app.use(bodyParser.json());
-
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send('i love ayaka 😊');
 });
 
 app.get('/cuties', async (req, res) => {
-    try {
-        const result = await sql`SELECT *  FROM cuties`;
-        res.json(result);
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
-        res.status(500).send('Error getting cuties.');
-    }
-
+    const query = `SELECT * FROM \`${bucket.name}\` ORDER BY createdAt ASC`;
+    const result = await cluster.query(query);
+    const allCuties = result.rows.map((row) => row[bucket.name]);
+    res.status(200).json(allCuties.sort((a, b) => a.createdAt - b.createdAt));
 });
-
+//
 app.post('/createcutie', async (req, res) => {
     const name = req.body.name;
     if (!name || !name.trim()) {
         res.status(400).send("Name is required");
         return
     }
-    try {
-        await sql`INSERT INTO cuties (name) VALUES (${name}) RETURNING *`;
-        res.status(201).send('done >///<');
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (error) {
-        res.status(500).send('Error creating cuties.');
-    }
+    const _id = `cutie:${Date.now()}`;
+    const createdAt = new Date().toISOString();
+
+
+    const cutie = {
+        _id,
+        name,
+        createdAt,
+    };
+
+    await collection.upsert(_id, cutie);
+    res.status(201).send("done >///<");
 })
 
 
 app.listen(port, () => {
     console.log(`love ayaka on: http://localhost:${port}`);
 });
-
-
-
-
-
-

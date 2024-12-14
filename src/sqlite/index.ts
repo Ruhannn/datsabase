@@ -71,11 +71,7 @@ app.post('/createcutie', (req, res) => {
                 return res.status(500).send('Failed to create cutie');
             }
 
-            res.status(201).send({
-                _id: this.lastID,
-                name,
-                createdAt: new Date().toISOString()
-            });
+            res.status(201).send(">////<");
         }
     );
 });
