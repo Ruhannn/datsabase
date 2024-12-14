@@ -9,5 +9,5 @@ export const getCuties = async () => {
     return (await api.get<Cutie[]>("/cuties")).data
 }
 export const createCutie = async (cutie:Cutie) => {
-    return (await api.post("/cratecutie",cutie)).data
+    return (await api.post("/createcutie",cutie)).data
 }

@@ -54,7 +54,7 @@ app.get('/cuties', async (req, res) => {
 });
 
 
-app.post('/cratecutie', (req, res) => {
+app.post('/createcutie', (req, res) => {
     const name = req.body.name;
     if (!name || !name.trim()) {
         res.status(400).send("Name is required");

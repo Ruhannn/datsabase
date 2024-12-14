@@ -18,7 +18,7 @@ export function CreateCutie() {
     return (
 
         <form className="flex-col flex justify-between items-center gap-3  relative" onSubmit={handleSubmit(onSubmit)}>
-            <input className="bg-zinc-600 p-2 w-[400px] rounded-lg text-white placeholder:text-center"
+            <input className="bg-zinc-600 p-2 w-[400px] text-center rounded-lg text-white placeholder:text-center"
                    placeholder="name of a cutie" {...register("name", {required: true})} autoComplete="off"/>
 
             {errors.name && <div

@@ -11,6 +11,8 @@
     "start:postgresql": "bun src/postgresql/index.ts",
     "dev:sqlite": "bun --watch src/sqlite/index.ts",
     "start:sqlite": "bun src/sqlite/index.ts",
+    "dev:redis": "bun --watch src/redis/index.ts",
+    "start:redis": "bun src/redis/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
@@ -27,6 +29,7 @@
     "mongoose": "^8.8.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "redis": "^4.7.0",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
