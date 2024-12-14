@@ -17,4 +17,4 @@
 
 - [x] 9. **EdgeDB** (graph-relational database)
 
-- [ ] 10. **Oracle** (RDBMS)
+- [ ] 10. **Appwrite** (idk)
