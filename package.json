@@ -25,6 +25,8 @@
     "start:appwrite": "bun src/appwrite/index.ts",
     "dev:cockroach": "bun --watch src/cockroachdb/index.ts",
     "start:cockroach": "bun src/cockroachdb/index.ts",
+    "dev:surrealdb": "bun --watch src/surrealdb/index.ts",
+    "start:surrealdb": "bun src/surrealdb/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
@@ -49,7 +51,8 @@
     "pg": "^8.13.3",
     "pocketbase": "^0.22.1",
     "redis": "^4.7.0",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "surrealdb": "^1.2.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
