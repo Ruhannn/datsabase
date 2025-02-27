@@ -7,7 +7,6 @@ import {config} from 'dotenv';
 import {sql} from "./database.ts";
 
 
-
 config();
 
 const app = express();
@@ -23,6 +22,8 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
     res.send('i love ayaka 😊');
 });
+
+
 
 app.get('/cuties', async (req, res) => {
     try {

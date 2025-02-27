@@ -23,7 +23,7 @@ export const connectToDatabase = async () => {
     )}@${dbHost}${isLocal ? ":" : "." + dbPort}/${dbName}?${options}`;
 
     try {
-        // console.log(connectionString);
+        console.log(connectionString);
         await mongoose.connect(connectionString);
         console.log("Connected to MongoDB successfully!");
     } catch (error) {

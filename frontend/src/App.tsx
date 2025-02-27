@@ -5,15 +5,17 @@ import {format} from "date-fns";
 import {getEmoji} from "./util";
 import {motion} from "framer-motion";
 import 'react-tippy/dist/tippy.css'
+import {useState} from "react";
 
 export default function App() {
+    const [add, setAdd] = useState(false);
     const {data} = useCuties()
     return (
         <div className="min-h-screen flex justify-center flex-col items-center bg-neutral-900 text-sky-50 gap-5">
             <h1 className="text-3xl text-sky-200">All Cuties</h1>
             <div className="flex justify-center items-center gap-2.5 flex-wrap
             ">
-                {data?.map((cutie) => {
+                {data?.map((cutie, i) => {
                         return (
                             // eslint-disable-next-line
                             // @ts-expect-error
@@ -31,7 +33,7 @@ export default function App() {
                                         duration: 1,
                                         type: "spring",
                                         bounce: 0.3,
-                                        // delay: 0.1 * i,
+                                        delay: 0.1 * (add ? 0 : i),
                                     }}
                                 >
                                     {cutie.name}
@@ -41,7 +43,7 @@ export default function App() {
                     }
                 )}
             </div>
-            <div className="mt-20"><CreateCutie/></div>
+            <div className="mt-20"><CreateCutie setAdd={setAdd}/></div>
         </div>
     )
         ;

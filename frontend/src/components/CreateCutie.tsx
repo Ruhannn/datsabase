@@ -4,11 +4,13 @@ import {useCreateCutie} from "../service/queries.ts";
 import "./style.css"
 
 
-export function CreateCutie() {
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
+export function CreateCutie({setAdd}: { setAdd: Function }) {
     const {register, handleSubmit, reset, formState: {errors}} = useForm<Inputs>();
     const createCutieMutation = useCreateCutie()
 
     const onSubmit: SubmitHandler<Inputs> = (cutie) => {
+        setAdd(true)
         createCutieMutation.mutate(cutie, {
             onSuccess: () => {
                 reset();

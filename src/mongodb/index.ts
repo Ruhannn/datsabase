@@ -1,10 +1,10 @@
 import express from 'express';
-import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
-import {config} from 'dotenv';
-import {connectToDatabase} from "./config.ts";
-import {Cutie} from "./schema.ts";
+import { config } from 'dotenv';
+import { connectToDatabase } from "./config.ts";
+import { Cutie } from "./schema.ts";
+import { kamiLogger } from 'kami-logger';
 
 config();
 
@@ -12,10 +12,13 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
-app.use(morgan('dev'));
+
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
+app.use(kamiLogger({
+    isMongoose: true,
+}))
 
 app.get('/', (req, res) => {
     res.send('i love ayaka 😊');
