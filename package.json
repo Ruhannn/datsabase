@@ -23,6 +23,8 @@
     "start:edgedb": "bun src/edgedb/index.ts",
     "dev:appwrite": "bun --watch src/appwrite/index.ts",
     "start:appwrite": "bun src/appwrite/index.ts",
+    "dev:cockroach": "bun --watch src/cockroachdb/index.ts",
+    "start:cockroach": "bun src/cockroachdb/index.ts",
     "lint": "eslint"
   },
   "peerDependencies": {
@@ -39,11 +41,12 @@
     "edgedb": "^1.5.12",
     "express": "^4.21.2",
     "helmet": "^8.0.0",
-    "kami-logger": "^3.1.0",
+    "kami-logger": "^4.0.1",
     "mongoose": "^8.8.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "node-appwrite": "^14.1.0",
+    "pg": "^8.13.3",
     "pocketbase": "^0.22.1",
     "redis": "^4.7.0",
     "sqlite3": "^5.1.7"
