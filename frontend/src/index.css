@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    user-select: none;
+* {
+  user-select: none;
 }

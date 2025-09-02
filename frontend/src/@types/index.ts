@@ -1,11 +1,11 @@
-export type Cutie = {
+export interface Cutie {
 
-    _id?: number | string;
-    name: string,
-    createdAt?: Date,
-    id?: number | string
-    createdat?: Date
+  _id?: number | string
+  name: string
+  createdAt?: Date
+  id?: number | string
+  createdat?: Date
 }
-export type Inputs = {
-    name: string,
-};
+export interface Inputs {
+  name: string
+}

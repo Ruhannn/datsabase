@@ -1,9 +1,9 @@
-import {Schema,model} from 'mongoose';
+import { model, Schema } from 'mongoose'
+
 const cutieSchema = new Schema({
-    name: {required: true, type: String},
-    createdAt: {type: Date, default: Date.now},
+  name: { required: true, type: String },
+  createdAt: { type: Date, default: Date.now },
 
-}, {versionKey: false});
+}, { versionKey: false })
 
-
-export const Cutie = model('Cutie', cutieSchema, "cuties");
+export const Cutie = model('Cutie', cutieSchema, 'cuties')

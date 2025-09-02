@@ -1,4 +1,5 @@
 ## hehe ;3
+
 - [x] 1. **MySQL** (Relational Database)
 
 - [x] 2. **PostgreSQL** (Relational Database)
@@ -17,4 +18,4 @@
 
 - [x] 9. **EdgeDB** (graph-relational database)
 
-- [X] 10. **Appwrite** (idk)
+- [x] 10. **Appwrite** (idk)

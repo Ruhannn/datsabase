@@ -1,8 +1,8 @@
 {
   "name": "frontend",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.62.7",
     "axios": "^1.7.9",
+    "caniuse-lite": "^1.0.30001739",
     "date-fns": "^4.1.0",
     "motion": "^11.14.4",
     "react": "^18.3.1",

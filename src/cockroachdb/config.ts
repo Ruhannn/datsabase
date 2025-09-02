@@ -1,7 +1,8 @@
-import { config } from 'dotenv';
-import { Client } from "pg";
+import { config } from 'dotenv'
+import { Client } from 'pg'
+
 config()
 
-const client = new Client(process.env.COCKROACH_DATABASE_URL);
+const client = new Client(process.env.COCKROACH_DATABASE_URL)
 
-export default client;
+export default client

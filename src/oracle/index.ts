@@ -1,10 +1,9 @@
 import cors from 'cors'
-
 import { config } from 'dotenv'
 import express from 'express'
 import helmet from 'helmet'
 import morgan from 'morgan'
-import { databases } from './database.ts'
+import { connection } from './database.ts'
 
 config()
 
@@ -16,23 +15,17 @@ app.use(morgan('dev'))
 app.use(helmet())
 app.use(cors())
 app.use(express.json())
-const databaseId = process.env.APPWRITE_DATABASE_ID!
-const collectionId = process.env.APPWRITE_COLLECTION_ID!
 
 app.get('/', (req, res) => {
   res.send('K 😊')
 })
 
 app.get('/cuties', async (req, res) => {
-  const allCuties = await databases.listDocuments(databaseId, collectionId)
-  const simpleCuties = allCuties.documents.map((user) => {
-    return {
-      name: user.name,
-      createdAt: user.createdAt,
-      _id: user.$id,
-    }
-  })
-  res.status(200).json(simpleCuties)
+  const allCuties = await connection.execute(`select * from cuties`)
+  res.status(200).send(allCuties.rows?.map((cutie) => {
+    const c = cutie as any[]
+    return { id: c[0], name: c[1], createdAt: c[2] }
+  }))
 })
 
 app.post('/createcutie', async (req, res) => {
@@ -41,12 +34,13 @@ app.post('/createcutie', async (req, res) => {
     res.status(400).send('Name is required')
     return
   }
-  const newCutie = {
-    name,
-    createdAt: new Date().toDateString(),
-  }
-  await databases.createDocument(databaseId, collectionId, 'unique()', newCutie)
-  res.status(201).send('done >///<')
+  await connection.execute(
+    `INSERT INTO cuties (name) VALUES (:name)`,
+    { name: name.trim() },
+    { autoCommit: true },
+  )
+
+  res.status(201).send('>////<')
 })
 
 app.listen(port, () => {
