@@ -177,3 +177,4 @@ dist
 /src/pocketbase/pb_migrations/
 *.edgeql
 duckdb.*
+database-service.json

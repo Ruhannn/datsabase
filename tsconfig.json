@@ -22,6 +22,8 @@
     "noUnusedParameters": false,
     "noEmit": true,
     "verbatimModuleSyntax": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    // eslint-disable-next-line jsonc/sort-keys
+    "resolveJsonModule": true
   }
 }
