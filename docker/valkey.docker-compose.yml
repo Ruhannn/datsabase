@@ -1,0 +1,12 @@
+services:
+  valkey:
+    image: valkey/valkey:latest
+    container_name: valkey-server
+    ports:
+      - "6379:6379"
+    volumes:
+      - valkey-data:/data
+    restart: unless-stopped
+
+volumes:
+  valkey-data:

@@ -18,5 +18,5 @@
 - [x] 16. **MariaDB** (Open-source fork of MySQL)
 - [ ] 17. **IBM Db2** (Enterprise Relational Database)
 - [x] 18. **Neo4j** (Graph Database)
-- [ ] 19. **CouchDB** (Document-oriented NoSQL Database)
+- [x] 19. **CouchDB** (Document-oriented NoSQL Database)
 - [ ] 20. **Valkey** (In-memory key-value store, Redis fork)
