@@ -13,7 +13,7 @@
 - [x] 11. **Oracle** (Multi-model Relational Database)
 - [x] 12. **DuckDB** (Embedded Analytical OLAP-oriented RDBMS)
 - [ ] 13. **H2** (An embedded relational database)
-- [ ] 14. **Firebase** (Cloud-based NoSQL / Realtime Database from Google)
+- [x] 14. **Firebase** (Cloud-based NoSQL / Realtime Database from Google)
 - [ ] 15. **Snowflake** (Cloud Data Warehouse)
 - [ ] 16. **MariaDB** (Open-source fork of MySQL)
 - [ ] 17. **IBM Db2** (Enterprise Relational Database)

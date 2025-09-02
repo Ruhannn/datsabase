@@ -18,6 +18,7 @@
     "oracle": "bun --watch src/oracle/index.ts",
     "duckdb": "bun --watch src/duckdb/index.ts",
     "firebase": "bun --watch src/firebase/index.ts",
+    "mariadb": "bun --watch src/mariadb/index.ts",
     "lint": "eslint ."
   },
   "peerDependencies": {
@@ -38,6 +39,7 @@
     "firebase-admin": "^13.5.0",
     "helmet": "^8.0.0",
     "kami-logger": "^4.0.1",
+    "mariadb": "^3.4.5",
     "mongoose": "^8.8.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
