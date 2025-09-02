@@ -20,6 +20,7 @@
     "firebase": "bun --watch src/firebase/index.ts",
     "mariadb": "bun --watch src/mariadb/index.ts",
     "neo4j": "bun --watch src/neo4j/index.ts",
+    "couchdb": "bun --watch src/couchdb/index.ts",
     "lint": "eslint ."
   },
   "peerDependencies": {
@@ -44,6 +45,7 @@
     "mongoose": "^8.8.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "nano": "^10.1.4",
     "neo4j-driver": "^5.28.1",
     "node-appwrite": "^14.1.0",
     "oracledb": "^6.9.0",
