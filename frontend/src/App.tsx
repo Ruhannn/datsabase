@@ -2,10 +2,10 @@ import { format } from 'date-fns'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Tooltip } from 'react-tippy'
+import 'react-tippy/dist/tippy.css'
 import { CreateCutie } from './components/CreateCutie.tsx'
 import { useCuties } from './service/queries.ts'
 import { getEmoji } from './util'
-import 'react-tippy/dist/tippy.css'
 
 export default function App() {
   const [add, setAdd] = useState(false)
@@ -29,7 +29,7 @@ export default function App() {
                   Cutie since
                   {' '}
                   <span className="font-bold">
-                    {format(cutie.createdAt ?? cutie.createdat!, 'do MMM Y')}
+                    {format(cutie.createdAt ?? cutie.createdat! ?? cutie.created_at!, 'do MMM Y')}
                   </span>
                   {' '}
                   {getEmoji()}

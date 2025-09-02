@@ -1,21 +1,22 @@
 ## hehe ;3
 
 - [x] 1. **MySQL** (Relational Database)
-
 - [x] 2. **PostgreSQL** (Relational Database)
-
 - [x] 3. **MongoDB** (NoSQL Database)
-
 - [x] 4. **SQLite** (Relational Database)
-
 - [x] 5. **Couchbase** (NoSQL Database)
-
 - [x] 6. **Redis** (In-memory Database)
-
 - [x] 7. **Cassandra** (NoSQL Database)
-
-- [x] 8. **PocketBase** (embedded SQLite)
-
-- [x] 9. **EdgeDB** (graph-relational database)
-
-- [x] 10. **Appwrite** (idk)
+- [x] 8. **PocketBase** (Embedded SQLite)
+- [x] 9. **EdgeDB** (Graph-relational Database)
+- [x] 10. **Appwrite** (Backend-as-a-Service with structured databases)
+- [x] 11. **Oracle** (Multi-model Relational Database)
+- [ ] 12. **DuckDB** (Embedded Analytical OLAP-oriented RDBMS)
+- [ ] 13. **Elasticsearch** (Search-oriented, distributed document store)
+- [ ] 14. **Firebase** (Cloud-based NoSQL / Realtime Database from Google)
+- [ ] 15. **Snowflake** (Cloud Data Warehouse)
+- [ ] 16. **MariaDB** (Open-source fork of MySQL)
+- [ ] 17. **IBM Db2** (Enterprise Relational Database)
+- [ ] 18. **Neo4j** (Graph Database)
+- [ ] 19. **CouchDB** (Document-oriented NoSQL Database)
+- [ ] 20. **Valkey** (In-memory key-value store, Redis fork)

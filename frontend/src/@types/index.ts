@@ -5,6 +5,7 @@ export interface Cutie {
   createdAt?: Date
   id?: number | string
   createdat?: Date
+  created_at?:Date
 }
 export interface Inputs {
   name: string

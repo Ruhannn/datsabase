@@ -176,3 +176,4 @@ dist
 /src/pocketbase/pb_data/
 /src/pocketbase/pb_migrations/
 *.edgeql
+duckdb.*

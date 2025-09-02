@@ -1,10 +1,10 @@
 import type { SubmitHandler } from 'react-hook-form'
-import type { Inputs } from '../@types'
 import { useForm } from 'react-hook-form'
+import type { Inputs } from '../@types'
 import { useCreateCutie } from '../service/queries.ts'
 import './style.css'
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
+
 export function CreateCutie({ setAdd }: { setAdd: Function }) {
   const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>()
   const createCutieMutation = useCreateCutie()
