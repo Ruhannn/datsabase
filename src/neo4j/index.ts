@@ -3,7 +3,7 @@ import { config } from 'dotenv'
 import express from 'express'
 import helmet from 'helmet'
 import { kamiLogger } from 'kami-logger'
-import { conn } from './database'
+import { session } from './database'
 
 config()
 
@@ -21,7 +21,15 @@ app.get('/', (req, res) => {
 })
 
 app.get('/cuties', async (req, res) => {
-  const allCuties = await conn.execute('SELECT * FROM cuties')
+  const result = await session.run('MATCH (c:Cutie) RETURN c')
+  const allCuties = result.records.map((r) => {
+    const node = r.get('c')
+    return {
+      id: node.elementId,
+      name: node.properties.name,
+      created_at: node.properties.created_at.toString(),
+    }
+  })
   res.status(200).json(allCuties)
 })
 
@@ -31,7 +39,10 @@ app.post('/createcutie', async (req, res) => {
     res.status(400).send('Name is required')
     return
   }
-  await conn.execute('INSERT INTO cuties (name) VALUES (?)', [name])
+  await session.run(
+    'CREATE (c:Cutie {name: $name, created_at: datetime()}) RETURN c',
+    { name },
+  )
   res.status(201).send('done >///<')
 })
 

@@ -15,7 +15,7 @@
 - [ ] 13. **H2** (An embedded relational database)
 - [x] 14. **Firebase** (Cloud-based NoSQL / Realtime Database from Google)
 - [ ] 15. **Snowflake** (Cloud Data Warehouse)
-- [ ] 16. **MariaDB** (Open-source fork of MySQL)
+- [x] 16. **MariaDB** (Open-source fork of MySQL)
 - [ ] 17. **IBM Db2** (Enterprise Relational Database)
 - [ ] 18. **Neo4j** (Graph Database)
 - [ ] 19. **CouchDB** (Document-oriented NoSQL Database)

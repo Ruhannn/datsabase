@@ -19,6 +19,7 @@
     "duckdb": "bun --watch src/duckdb/index.ts",
     "firebase": "bun --watch src/firebase/index.ts",
     "mariadb": "bun --watch src/mariadb/index.ts",
+    "neo4j": "bun --watch src/neo4j/index.ts",
     "lint": "eslint ."
   },
   "peerDependencies": {
@@ -43,6 +44,7 @@
     "mongoose": "^8.8.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "neo4j-driver": "^5.28.1",
     "node-appwrite": "^14.1.0",
     "oracledb": "^6.9.0",
     "pg": "^8.13.3",
